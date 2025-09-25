@@ -1,73 +1,73 @@
-# React + TypeScript + Vite
+# StrumpShop 🎸
+##### Tienda de Guitarras en React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
 
-Currently, two official plugins are available:
+Este es un proyecto personal que simula una tienda de guitarras en línea. Es mi primer proyecto en **React** con **TypeScript** y fue creado para practicar conceptos clave como el **manejo de estado** y la **persistencia de datos**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+La aplicación permite a los usuarios:
 
-## React Compiler
+  * Agregar o eliminar guitarras del carrito.
+  * Ajustar la cantidad de cada guitarra, con un límite de 1 a 7 unidades.
+  * Ver cómo el precio total se actualiza de forma dinámica con cada cambio.
+  * Mantener el carrito de compras persistente gracias a **Local Storage**, lo que significa que los datos no se pierden al recargar la página.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+-----
 
-## Expanding the ESLint configuration
+## 🔗 Ver el Proyecto
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Puedes ver la versión desplegada y en vivo de la tienda de guitarras en el siguiente enlace:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**[StrumpShop](https://strumpshop-245616.netlify.app/)**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+-----
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ⚙️ Funcionalidades
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+  * **Carrito dinámico:** Actualiza los precios en tiempo real.
+  * **Control de cantidades:** Permite ajustar la cantidad de cada producto con un mínimo y un máximo.
+  * **Persistencia de datos:** El carrito guarda su estado en **Local Storage**.
+  * **Interfaz:** Diseño simple e intuitivo para una experiencia de usuario fluida.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+-----
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ Tecnologías
+
+  * **React**
+  * **TypeScript**
+  * **HTML5** / **CSS3**
+  * **Local Storage**
+
+-----
+
+## 💻 Instalación
+
+Sigue estos pasos para ejecutar la aplicación en tu entorno local:
+
+1.  Clona el repositorio en tu máquina:
+    ```bash
+    git clone https://github.com/CybrDev-F404x/StrumpShop.git
+    ```
+2.  Entra al directorio del proyecto e instala las dependencias:
+    ```bash
+    cd strumpshop
+    pnpm install
+    ```
+3.  Inicia la aplicación:
+    ```bash
+    pnpm run dev
+    ```
+4.  Abre tu navegador y navega a la direccion que te indique la terminal `http://localhost:....`.
+
+-----
+
+## 🚀 Uso
+
+Una vez que la aplicación esté en funcionamiento, puedes:
+
+  * Navegar por la tienda y ver las guitarras disponibles.
+  * Hacer clic en los botones para agregar o eliminar guitarras del carrito.
+  * Ajustar la cantidad de cada guitarra.
+  * Ver el precio total actualizarse automáticamente.
+  * Recargar la página y ver que tu carrito sigue igual, gracias a la persistencia de datos.
+
